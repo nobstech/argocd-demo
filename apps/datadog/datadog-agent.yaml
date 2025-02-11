@@ -4,6 +4,7 @@ metadata:
   name: datadog
 spec:
   global:
+    clusterName: davetron-labs-01
     site: datadoghq.com
     credentials:
       apiSecret:
