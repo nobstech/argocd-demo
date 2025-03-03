@@ -11,3 +11,11 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: http
+  destination:
+    namespace: applications
+    name: k3d-davetron-labs-mbp-worker
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
