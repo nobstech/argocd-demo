@@ -11,3 +11,7 @@ spec:
     repoURL: 'https://github.com/nobstech/argocd-demo'
     targetRevision: HEAD
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

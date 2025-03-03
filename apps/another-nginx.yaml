@@ -23,7 +23,7 @@ spec:
             containerPort: 80
   destination:
     namespace: applications
-    name: k3d-davetron-labs-mbp-worker
+    server: k3d-davetron-labs-mbp-worker
   syncPolicy:
     automated: {}
     syncOptions:
