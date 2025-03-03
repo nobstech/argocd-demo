@@ -2,5 +2,9 @@ datadog:
   apiKeyExistingSecret: "datadog-agent"
   site: datadoghq.com
   clusterName: k3d-davetron-labs-mbp-02
+  spec:
+    features:
+      liveProcessCollection:
+        enabled: true
   tags:
     - "env:dev"
