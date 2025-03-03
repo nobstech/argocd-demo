@@ -13,7 +13,7 @@ spec:
       targetPort: http
   destination:
     namespace: applications
-    server: k3d-davetron-labs-mbp-worker
+    server: https://0.0.0.0:51248
   syncPolicy:
     automated: {}
     syncOptions:
