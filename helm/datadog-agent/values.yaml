@@ -1,10 +1,13 @@
 datadog:
   apiKeyExistingSecret: "datadog-agent"
+  appKeyExistingSecret: "datadog-app"
   site: datadoghq.com
   clusterName: k3d-davetron-labs-mbp-02
-  spec:
-    features:
-      liveProcessCollection:
-        enabled: true
+  processAgent:
+    enabled: true
+    processCollection: true
+  clusterAgent:
+    enabled: true
+    tokenExistingSecret: datadog-agent-cluster-agent
   tags:
     - "env:dev"
