@@ -3,6 +3,11 @@ datadog:
   appKeyExistingSecret: datadog-app
   site: datadoghq.com
   clusterName: k3d-davetron-labs-mbp-03
+  processAgent:
+    enabled: true
+    processCollection: true
+  clusterAgent:
+    enabled: true
   logs:
     enabled: true
     containerCollectAll: true
