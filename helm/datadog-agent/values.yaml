@@ -1,6 +1,6 @@
 datadog:
-  apiKeyExistingSecret: "datadog-agent"
-  appKeyExistingSecret: "datadog-app"
+  apiKeyExistingSecret: datadog-agent
+  appKeyExistingSecret: datadog-app
   site: datadoghq.com
   clusterName: k3d-davetron-labs-mbp-03
   processAgent:
