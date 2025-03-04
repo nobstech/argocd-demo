@@ -8,7 +8,6 @@ datadog:
     processCollection: true
   clusterAgent:
     enabled: true
-    tokenExistingSecret: datadog-agent-cluster-agent
   logs:
     enabled: true
     containerCollectAll: true
