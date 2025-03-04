@@ -1,4 +1,4 @@
-apiVersion: v2
+apiVersion: argoproj.io/v1alpha1
 name: datadog
 description: Installs the datadog-cluster-agent via helm 
 type: application
