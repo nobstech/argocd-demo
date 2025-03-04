@@ -11,5 +11,3 @@ datadog:
   logs:
     enabled: true
     containerCollectAll: true
-  tags:
-    - "env:dev"

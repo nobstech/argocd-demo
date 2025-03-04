@@ -1,7 +1,7 @@
 apiVersion: v2
 name: datadog-agent
 description: Installs the datadog-cluster-agent via helm 
-type: application
+type: Application
 
 # NOTE: this is the version of the chart, aka what we are editing right now. 
 version: 0.1.0
