@@ -9,5 +9,15 @@ datadog:
   clusterAgent:
     enabled: true
     tokenExistingSecret: datadog-agent-cluster-agent
+  confd:
+    argocd.yaml: |-
+      ad_identifiers:
+        - datadog-agent-cluster-agent
+      init_config:
+      instance:
+        - app_controller_endpoint: https://localhost:8082/metricsi
+  logs:
+    enabled: true
+    containerCollectAll: true
   tags:
     - "env:dev"
