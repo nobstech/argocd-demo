@@ -1,0 +1,17 @@
+apiVersion: v2
+name: datadog-agent
+description: Installs the datadog-cluster-agent via helm 
+type: application
+
+# NOTE: this is the version of the chart, aka what we are editing right now. 
+version: 0.1.0
+
+# NOTE: this is the version of the app being deployed. It is NOT the same as the chart version. be careful with this.
+appVersion: "1.0"
+
+dependencies:
+- name: datadog
+
+  # NOTE: This version MUST match the version you are targeting from the helm remote 'helm search repo datadog' to view    
+  version: 3.101.0
+  repository: https://helm.datadoghq.com
