@@ -6,8 +6,6 @@ datadog:
   processAgent:
     enabled: true
     processCollection: true
-  clusterAgent:
-    enabled: true
   logs:
     enabled: true
     containerCollectAll: true
