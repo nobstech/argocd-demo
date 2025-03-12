@@ -1,5 +1,5 @@
 datadog:
-  apiKeyExistingSecret: datadog-agent
+  apiKeyExistingSecret: datadog
   appKeyExistingSecret: datadog-app
   site: datadoghq.com
   clusterName: k3d-davetron-labs-mbp-03
@@ -13,6 +13,9 @@ datadog:
     containerCollectAll: true
 clusterAgent:
   enabled: true
+  tokenExistingSecet: datadog-cluster-agent
+  rbac:
+    create: true
   confd:
     argocd.yaml: |-
       ad_identifiers:
