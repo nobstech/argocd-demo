@@ -6,8 +6,20 @@ datadog:
   processAgent:
     enabled: true
     processCollection: true
-  clusterAgent:
+  clusterChecks:
     enabled: true
   logs:
     enabled: true
     containerCollectAll: true
+clusterAgent:
+  enabled: true
+  confd:
+    argocd.yaml: |-
+      ad_identifiers:
+        - argocd-application-controller
+        - argocd-server
+        - argocd-repo-server 
+      instances:
+        - app_controller_endpoint: http://%%host%%:8082/metrics
+        - api_server_endpoint: http://%%host%%:8083/metrics
+        - repo_server_endpoint: http://%%host%%:8084/metrics
