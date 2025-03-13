@@ -1,3 +1,6 @@
+datadog:
+  apiKeyExistingSecret: datadog-secret
+  clusterName: k3d-davetron-labs-mbp-05
 argo-cd:
   dex:
     enabled: false
