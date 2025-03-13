@@ -16,6 +16,8 @@ clusterAgent:
   tokenExistingSecet: datadog-cluster-agent
   rbac:
     create: true
+agents:
+  enabled: true
   confd:
     argocd.yaml: |-
       ad_identifiers:
@@ -26,5 +28,4 @@ clusterAgent:
         - app_controller_endpoint: http://%%host%%:8082/metrics
         - api_server_endpoint: http://%%host%%:8083/metrics
         - repo_server_endpoint: http://%%host%%:8084/metrics
-agents:
-  enabled: true
+      
