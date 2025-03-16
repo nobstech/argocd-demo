@@ -16,9 +16,26 @@ spec:
     metadata:
       labels:
         app: nginx
+        tags.datadoghq.com/service: "nginx-davetron"
+        tags.datadoghq.com/version: "0.1.0"
+        tags.datadoghq.com/env: "dev"
+
     spec:
       containers:
       - name: nginx
         image: nginx:latest
         ports:
         - containerPort: 80
+        env:
+          - name: DD_ENV
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.labels['tags.datadoghq.com/env']
+          - name: DD_SERVICE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.labels['tags.datadoghq.com/service']
+          - name: DD_VERSION 
+            valueFrom: 
+              fieldRef: 
+                fieldPath: metadata.labels['tags.datadoghq.com/version']
