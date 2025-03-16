@@ -1,5 +1,5 @@
 datadog:
-  apiKeyExistingSecret: datadog-secret
+  apiKeyExistingSecret: datadog
   site: datadoghq.com
   clusterName: k3d-davetron-labs-mbp-06
   agents:
