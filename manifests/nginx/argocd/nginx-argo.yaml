@@ -4,6 +4,8 @@ metadata:
   name: nginx-deployment
   labels:
     app: nginx
+  annotations:
+    ad.datadoghq.com/tags: '{"service": "nginx-davetron"}'
 spec:
   replicas: 3
   selector:
