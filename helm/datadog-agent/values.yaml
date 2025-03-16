@@ -1,8 +1,7 @@
 datadog:
-  apiKeyExistingSecret: datadog
-  appKeyExistingSecret: datadog-app
+  apiKeyExistingSecret: datadog-secret
   site: datadoghq.com
-  clusterName: k3d-davetron-labs-mbp-03
+  clusterName: k3d-davetron-labs-mbp-06
   processAgent:
     enabled: true
     processCollection: true
@@ -11,21 +10,3 @@ datadog:
   logs:
     enabled: true
     containerCollectAll: true
-clusterAgent:
-  enabled: true
-  tokenExistingSecet: datadog-cluster-agent
-  rbac:
-    create: true
-agents:
-  enabled: true
-  confd:
-    argocd.yaml: |-
-      ad_identifiers:
-        - argocd-application-controller
-        - argocd-server
-        - argocd-repo-server 
-      instances:
-        - app_controller_endpoint: http://%%host%%:8082/metrics
-        - api_server_endpoint: http://%%host%%:8083/metrics
-        - repo_server_endpoint: http://%%host%%:8084/metrics
-      
